@@ -1,5 +1,7 @@
+
 import logo from './logo.svg';
 import './App.css';
+import newExpense from './component/expenses/newExpense';
 import ExpenseItem from './component/expenses/ExpenseItem';
 
 function App() {
@@ -15,7 +17,9 @@ function App() {
   
     return (
          <div>
-      
+            <div>
+              <newExpense></newExpense>
+            </div>
            
            <ExpenseItem
             title={expenses[0].title}

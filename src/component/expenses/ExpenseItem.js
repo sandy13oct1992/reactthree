@@ -1,6 +1,13 @@
+import React, {useState} from 'react';
 import ExpenseDate from './ExpenseDate';
+
 function ExpenseItem(props) {
-    console.log(props);
+    const [title, setTitle]=useState(props.title);
+
+    const clickHandler = () => {
+    setTitle('updated');
+    console.log(title);
+    } 
     // const expenseDate = new Date(2024, 1, 31);
     // const expenseTitle= "car Insurance";
     // const expenseAmount= 294.67;
@@ -15,6 +22,7 @@ function ExpenseItem(props) {
              {/* <div>{month}</div>
              <div>{day}</div>
              <div>{year}</div> */}
+             
              <ExpenseDate 
              date={props.date}></ExpenseDate>
              <div>
@@ -22,7 +30,7 @@ function ExpenseItem(props) {
                 {/* <h2>{props.location}</h2> */}
                 <div>{props.amount}</div>
             </div>
-           <button>Delete</button>
+           <button onClick= {clickHandler}>Change Title</button>
         </div>)
                
 }
