@@ -49,12 +49,15 @@ const submitHandler = (event) => {
     date:new Date(enteredDate),
   }
   console.log(expensedata);
+  setenteredTitle('');
+  setenteredAmount('');
+  setenteredDate('');
 }
 return <form onSubmit= {submitHandler}>
     <div>
         <div>
         <label>Expense Title</label>
-        <input type= "text" onChange={titleChangeHandler}/>
+        <input type= "text" value={enteredTitle} onChange={titleChangeHandler}/>
         </div>
         <div>
         <label>Expense amount</label>
