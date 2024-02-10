@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import ExpenseDate from './ExpenseDate';
+import ExpenseFilter from './ExpensesFilter';
 
 function ExpenseItem(props) {
     const [title, setTitle]=useState(props.title);
@@ -8,6 +9,13 @@ function ExpenseItem(props) {
     setTitle('updated');
     console.log(title);
     } 
+  
+    const expense = (props) =>{
+        const [filteredYear, setFiltyeredYear] = useState('2022');
+    }
+    const filterChangeHandler = selectedyear => {
+     setFilteredYear(selectedyear);
+    }
     // const expenseDate = new Date(2024, 1, 31);
     // const expenseTitle= "car Insurance";
     // const expenseAmount= 294.67;
@@ -22,7 +30,7 @@ function ExpenseItem(props) {
              {/* <div>{month}</div>
              <div>{day}</div>
              <div>{year}</div> */}
-             
+             <ExpenseFilter selected= {filteredYear} onChangeFilter= {filterChangeHandler} />
              <ExpenseDate 
              date={props.date}></ExpenseDate>
              <div>

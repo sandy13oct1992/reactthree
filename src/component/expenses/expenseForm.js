@@ -61,11 +61,11 @@ return <form onSubmit= {submitHandler}>
         </div>
         <div>
         <label>Expense amount</label>
-        <input type= "number" onChange={amountChangeHandler}/>
+        <input type= "number" value={enteredAmount} onChange={amountChangeHandler}/>
         </div>
         <div>
         <label>Expense date</label>
-        <input type= "date" onChange={dateChangeHandler}/>
+        <input type= "date" value={enteredTitle} onChange={dateChangeHandler}/>
         </div>
         <div>
             <button type='submit'>Submit</button>
