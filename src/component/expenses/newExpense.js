@@ -1,7 +1,9 @@
 import React from 'react';
-import expenseForm from './expenseForm';
-const newExpense = () => {
+import ExpenseForm from './ExpenseForm';
+const NewExpense = () => {
     return <div>
-        <expenseForm></expenseForm>
+        <ExpenseForm></ExpenseForm>
     </div>
 }
+
+export default NewExpense;

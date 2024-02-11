@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const expenseForm=() =>{
+const ExpenseForm=() =>{
     const [enteredTitle, setenteredTitle] = useState('');
     const [enteredAmount, setenteredAmount] = useState('');
     const [enteredDate, setenteredDate] = useState('');
@@ -74,4 +74,4 @@ return <form onSubmit= {submitHandler}>
 </form>
 }
 
-export default expenseForm;
+export default ExpenseForm;

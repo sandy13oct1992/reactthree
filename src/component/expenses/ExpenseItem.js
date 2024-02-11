@@ -4,15 +4,14 @@ import ExpenseFilter from './ExpensesFilter';
 
 function ExpenseItem(props) {
     const [title, setTitle]=useState(props.title);
+    const [filteredYear, setFilteredYear] = useState('2022');
 
     const clickHandler = () => {
     setTitle('updated');
     console.log(title);
     } 
   
-    const expense = (props) =>{
-        const [filteredYear, setFiltyeredYear] = useState('2022');
-    }
+    
     const filterChangeHandler = selectedyear => {
      setFilteredYear(selectedyear);
     }
