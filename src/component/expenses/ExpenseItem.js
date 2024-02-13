@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import ExpenseDate from './ExpenseDate';
 import ExpenseFilter from './ExpensesFilter';
+import ExpenseForm from './ExpenseForm';
 
 function ExpenseItem(props) {
     const [title, setTitle]=useState(props.title);
@@ -22,13 +23,14 @@ function ExpenseItem(props) {
     //   const day=props.date.toLocaleString('en-us', {day: '2-digit'});
     //   const year=props.date.getFullYear();
 
-    
+    console.log(props);
 
     return (<div>
              {/* <div>{props.date.toISOString()}</div> */}
              {/* <div>{month}</div>
              <div>{day}</div>
              <div>{year}</div> */}
+             
              <ExpenseFilter selected= {filteredYear} onChangeFilter= {filterChangeHandler} />
              <ExpenseDate 
              date={props.date}></ExpenseDate>
