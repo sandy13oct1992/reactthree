@@ -21,7 +21,11 @@ return (
         selected={filteredyear}
         onChangeFilter={filterChangeHandler}
          />
-          {filteredExpense.map((expense) => (
+
+         {filteredExpense.length===1 ? (
+            <p>Only Single Expense Here</p>
+         ):(
+          filteredExpense.map((expense) => (
            <ExpenseItem 
            key={expense.id}
            title={expense.title}
@@ -29,6 +33,7 @@ return (
            date={expense.date}
           //  location={expenses[4].location}
            ></ExpenseItem> 
+          )
           ))}
 {/* <ExpenseItem 
            title={props.item[1].title}
