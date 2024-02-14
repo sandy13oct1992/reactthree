@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const ExpenseForm=() =>{
+const ExpenseForm=(props) =>{
     const [enteredTitle, setenteredTitle] = useState('');
     const [enteredAmount, setenteredAmount] = useState('');
     const [enteredDate, setenteredDate] = useState('');
@@ -69,6 +69,7 @@ return <form onSubmit= {submitHandler}>
         </div>
         <div>
             <button type='submit'>Submit</button>
+            <button type = "buttion" onClick={props.onCancel}>Cancel</button>
         </div>
     </div>
 </form>
