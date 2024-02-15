@@ -1,6 +1,7 @@
  import { useState } from 'react';
  import ExpenseItem from './ExpenseItem'
  import ExpenseFilter from './ExpensesFilter';
+ import ExpenseChart from './ExpensesChart';
 
  function Expenses(props){
     console.log(props);
@@ -34,7 +35,10 @@ return (
           //  location={expenses[4].location}
            ></ExpenseItem> 
           )
+          
           ))}
+
+<ExpenseChart expense={filteredExpense}/>
 {/* <ExpenseItem 
            title={props.item[1].title}
            amount={props.item[1].amount}
